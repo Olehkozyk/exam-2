@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+@import "normalize";
+@import "layout";
+@import "elements";
+@import "slick";
+button{
+	outline: none;
+}
+@font-face {
+	font-family: "GothamRegular";
+	src: url("../font/gotham-medium-webfont.woff") format("woff"),
+		 url("../font/gotham-medium-webfont.woff2") format("woff2");
+   }
+   @font-face {
+	font-family: "GothamBook";
+	src: url("../font/Gotham-Book.woff") format("woff"),
+		 url("../font/Gotham-Book.woff2") format("woff2");
+   }
+   @font-face {
+	font-family: "GothamBold";
+	src: url("../font/Gotham-Bold.woff") format("woff"),
+		 url("../font/Gotham-Bold.woff2") format("woff2");
+   }
+body{
+	font: 400 18px/1 "GothamRegular";
+	// background: #341232;
+}
+html{
+	scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+	
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.ba-hide{
+	display: none;
+}
+.ba-header{
+	position: absolute;
+	top: 53px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	// left: 50%;
+}
+.ba-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ba-nav{
+	display: flex;
+	li{
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: "GothamBook";
+		position: relative;
+		a{
+			&:hover{
+				&::before{
+					background: #fff;
+					}
+			}
+			&::before{
+				position: absolute;
+				content: "";
+				top: 2px;
+				left: -14px;
+				width: 9px;
+				height: 9px;
+				border: 1px solid#fff;
+				border-radius: 50%;
+			}
+		
+		}
+	}
+	li+ li{
+		margin-left: 90px;
+	}
+
+}
+.ba-menu__socia{
+	svg{
+		fill: #fff;
+		&:hover{
+			fill: red;
+		}
+	}
+	
+	a + a{
+		margin-left: 23px;
+	}
+}
+.ba-slide-simple{
+	padding: 360px 0 319px;
+	text-align: center;
+
+}
+.ba-title-slide{
+	color: #fff;
+	font-size: 80px;
+	font-family: "GothamBold";
+	text-transform: uppercase;
+	margin-bottom: 39px;
+}
+.ba-subtitle-slide{
+	color: #fff;
+	font-size: 18px;
+	font-family: "GothamBook";
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.ba-slide-simple{
+	background-size: cover;
+}
+.ba-slide{
+	.slick-dots{
+		position: absolute;
+		top: 35%;
+		right: 40px;
+		li + li{
+			margin-top: 40px;
+		}
+		li{
+			width: 9px;
+			height: 9px;
+			button{
+				font-size: 0;
+				padding: 0;
+				border: 1px solid#fff;
+				border-radius: 50%;
+				width: 9px;
+				height: 9px;
+				background: transparent;
+			}
+		}
+		.slick-active{
+		
+			button{
+				background: #fff;
+			}
+		
+	}
+		
+	}
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px;
+}
+.ba-slide{
+	position: relative;
+}
+
+.ba-scroll{
+	padding: 10px 17px 17px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid#fff;
+	position: absolute;
+	bottom: 43px;
+	left: calc(50% - 22px);
+	
+	&:hover{
+		background: rgba(255, 255, 255, 0.3);
+		border: 1px solid#fff;
+	}
+	a{
+		// position: absolute;
+		line-height: 0;
+		width: 8px;
+		height: 5px;
+	}
+}
+.ba-info-section{
+	padding: 140px 0 140px;
+}
+
+.ba-we-do{
+	text-align: center;
+	font-size: 44px;
+	text-transform: uppercase;
+	color:  #2c4058;
+	font-family: "GothamBold";
+	font-weight: 700;
+	margin-bottom: 170px;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: '';
+		width: 100px;
+		height: 1px;
+		top: -37px;
+		left: calc(50% - 50px);
+		background: #2c4058;
+
+	}
+}
+.ba-mont-info{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.flex-rever{
+	flex-direction: row-reverse;
+	margin-top: 210px;
+}
+.ba-info__text{
+	max-width: 470px;
+	padding-top: 59px;
+	h4{
+		text-transform: uppercase;
+		font: 700 44px/1 "GothamBold";
+		color: #2c4058;
+		margin-bottom: 25px;
+		margin-top: 10px;
+	}
+	.ba-text{
+		
+		color:  rgba(74, 85, 98, 0.8);
+		margin-bottom: 36px;
+		font: 400 18px/1.5 'Open Sans', sans-serif;
+
+	}
+	button{
+		font: 300 14px/1 "GothamBook";
+		text-transform: uppercase;
+		color: #2c4058;
+		padding: 16px 41px;
+		background: transparent;
+		border: 1px solid #2c4058;
+		margin-bottom: 63px;
+		&:hover{
+			background: rgba(163, 140, 140, 0.5);
+		}
+	}
+	
+}
+p{
+	margin: 0;
+}
+.ba-toptitle{
+	font-size: 22px;
+	// margin-bottom: 20px;
+	color: #2c4058;
+	font-weight: 300;
+	font-family:  "GothamRegular";
+	text-transform: uppercase;
+}
+.ba-info-city{
+	font-size: 18px;
+	font-style: italic;
+	color: #2c4058;
+	font-family: 'Open Sans', sans-serif;
+	svg{
+		width: 10px;
+		margin-right: 5px;
+	}
+}
+.ba-info__img{
+	
+box-shadow: -250px -70px 0px 0px  #55b7ff;
+}
+.box-shad{
+	box-shadow: 250px -70px 0px 0px  #7e5aff;
+}
+.ba-section-news{
+	padding: 181px 0 140px;
+	background-image: url('../img/Bgcard.jpg');
+	background-size: cover;
+}
+.ba-title-news{
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	font-size: 44px;
+	margin-bottom: 100px;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: '';
+		width: 100px;
+		height: 1px;
+		top: -37px;
+		left: calc(50% - 50px);
+		background: #fff;
+	}
+}
+.ba-img-card{
+	display: flex;
+}
+.ba-text-card{
+	background: #fff;
+	padding: 21px 20px 21px 21px;
+	h6{
+		font: 700 22px/1.5 "GothamBold";
+		color: #2c4058;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+}
+p{
+	font: 400 18px/1  'Open Sans', sans-serif;
+	color:  rgba(74, 85, 98, 0.7);
+	margin-bottom: 35px;
+}
+.ba-name-card{
+	margin: 0;
+	color: #2c4058;
+	font-size: 18px;
+	font-family: "GothamBook";
+	text-transform: uppercase;
+	margin-bottom: 13px;
+	
+}
+.ba-data-name{
+	display: flex;
+	// max-width: 200px;
+}
+.ba-img-avatar{
+	margin-right: 20px;
+}
+
+.ba-name-avatar{
+	time{
+		color: #55b7ff;
+		font-size: 14px;
+		font-weight: 300;
+		font-family: "GothamBook";
+	}
+}
+.ba-card-info{
+	padding: 0 15px 0 15px;
+	position: relative;
+}
+.ba-slide-card{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.ba-card-slider-prev{
+	
+	position: absolute;
+	content: "";
+	top: calc(50% - 40px);
+	background: transparent;
+	padding:  15px;
+	border: 1px solid#fff;
+	border-radius: 50%;
+	left: -60px;
+	width: 40px;
+	height: 40px;
+	img{
+		display: flex;
+	}
+
+}
+.ba-card-slider-next{
+	
+	position: absolute;
+	content: "";
+	top: calc(50% - 40px);
+	background: transparent;
+	padding: 15px 17px;
+	border: 1px solid#fff;
+	border-radius: 50%;
+	right: -60px;
+	width: 40px;
+	height: 40px;
+	img{
+		display: flex;
+	}
+
+}
+.ba-card-slider-next:hover{
+	background: rgba(255, 255, 255 , 0.5);
+}
+.ba-card-slider-prev:hover{
+	background: rgba(255, 255, 255 , 0.5);
+}
+.ba-slide-card{
+
+
+	.slick-dots{
+		list-style: none;
+		position: absolute;
+		display: flex;
+		bottom: -60px;
+		left: calc(50% - 80px);
+		li + li{
+			margin-left: 40px;
+		}
+		li{
+			width: 9px;
+			height: 9px;
+			button{
+				font-size: 0;
+				padding: 0;
+				border: 1px solid#fff;
+				border-radius: 50%;
+				width: 9px;
+				height: 9px;
+				background: transparent;
+			}
+		}
+		.slick-active{
+		
+			button{
+				background: #fff;
+			}
+		
+	}
+}
+}
+.ba-footer{
+	height: 500px;
+}
+.ba-section-map{
+	position: relative;
+}
+.ba-map{
+	height: 700px;
+}
+.ba-form{
+	padding: 91px 60px 79px;
+	background: #fff;
+	position: absolute;
+	max-width: 770px;
+	bottom: -200px;
+	left: calc(50% - 315px);
+}
+.ba-title-form{
+	text-transform: uppercase;
+	font-family: "GothamRegular";
+	font-size: 44px;
+	color: #2c4058;
+	position: relative;
+	text-align: center;
+	margin-bottom: 59px;
+	&::before{
+		position: absolute;
+		content: '';
+		width: 100px;
+		height: 1px;
+		top: -37px;
+		left: calc(50% - 50px);
+		background: #2c4058;
+	}
+}
+.ba-form_block{
+	display: flex;
+
+}
+.ba-form-submit{
+	form{
+	display: flex;
+	flex-direction: column;
+	}
+	input{
+		border: none;
+		border-bottom: 1px solid #2c4058;
+		outline: none;
+		padding: 20px 0;
+
+	}
+}
+.ba-form-info{
+	max-width: 228px;
+}
+
+.ba-form-submit-type{
+	margin-top: 40px;
+	// max-width: 138px;
+	background: transparent;
+	padding: 20px 42px;
+	border: 1px solid#2c4058;
+}
